@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch, AsyncMock
-from sol import api_response_callback, async_timer, fetch_data_from_api
+from main import api_response_callback, async_timer, fetch_data_from_api
 
 
 # 1. Test für api_response_callback
