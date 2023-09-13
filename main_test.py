@@ -28,10 +28,18 @@ async def test_fetch_data_from_api():
     mock_callback = Mock()
     mock_response = Mock()
     mock_response.text = "test response"  # Setzen Sie den Response-Text
-    with patch('httpx.AsyncClient', return_value=Mock(get=AsyncMock(return_value=mock_response))), \
-         patch('asyncio.sleep', side_effect=[None, StopAsyncIteration]):
+
+    # Erstellen Sie einen Mock für den AsyncClient
+    mock_client = AsyncMock()
+    mock_client.get.return_value = mock_response
+    mock_client.__aenter__.return_value = mock_client
+    mock_client.__aexit__.return_value = False
+
+    with patch('httpx.AsyncClient', return_value=mock_client), \
+            patch('asyncio.sleep', side_effect=[None, StopAsyncIteration]):
         try:
             await fetch_data_from_api(mock_callback)
         except StopAsyncIteration:
             pass
+
     mock_callback.assert_called_with(mock_response)
