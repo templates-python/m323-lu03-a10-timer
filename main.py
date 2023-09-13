@@ -12,7 +12,8 @@ def api_response_callback(response_data):
     Returns:
     - None, da die Daten direkt in der Konsole ausgegeben werden.
     """
-    #TODO: Hier die Daten verarbeiten
+    print(f"API Response: {response_data}")
+
 
 async def fetch_data_from_api(callback):
     """
@@ -26,7 +27,11 @@ async def fetch_data_from_api(callback):
     Returns:
     - None, da die Daten an die Callback-Funktion weitergegeben werden.
     """
-    # TODO: Hier in einer Endlosschleife die API aufrufen und die Daten an die Callback-Funktion übergeben
+    while True:
+        async with httpx.AsyncClient() as client:
+            response = await client.get('https://hub.dummyapis.com/delay?seconds=3')
+        callback(response)
+        await asyncio.sleep(3)
 
 
 async def async_timer():
@@ -37,7 +42,12 @@ async def async_timer():
     Returns:
     - None, da der Zählerstand direkt in der Konsole ausgegeben wird.
     """
-    #TODO: Hier den Timer implementieren
+
+    count = 0
+    while True:
+        print(count)
+        count += 1
+        await asyncio.sleep(1)
 
 
 async def main():
