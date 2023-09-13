@@ -1,24 +1,34 @@
 {
   "tests": [
     {
-      "name": "Input/Output",
-      "setup": "",
-      "run": "python3 main.py",
-      "input": "",
-      "output": "Total: 78.75\n",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "Pytest",
+      "name": "test_api_response_callback",
       "setup": "sudo -H pip3 install -r requirements.txt",
-      "run": "pytest -v  -k \"test\"",
+      "run": "pytest -v  -k \"test_api_response_callback\"",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 2
+      "points": 1
+    },
+    {
+      "name": "test_async_timer",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest -v  -k \"test_async_timer\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "test_fetch_data_from_api",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest -v  -k \"test_fetch_data_from_api\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }
