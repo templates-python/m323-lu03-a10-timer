@@ -1,0 +1,20 @@
+[
+  {
+    "name": "test_api_response_callback",
+    "function": "test_api_response_callback",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_async_timer",
+    "function": "test_async_timer",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_fetch_data_from_api",
+    "function": "test_fetch_data_from_api",
+    "timeout": 10,
+    "points": 1
+  }
+]
