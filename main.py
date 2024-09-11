@@ -16,7 +16,7 @@ def api_response_callback(response_data):
 
 async def fetch_data_from_api(callback):
     """
-    Diese Funktion ruft asynchron alle 3 Sekunden eine API ('https://hub.dummyapis.com/delay?seconds=3') auf, die eine
+    Diese Funktion ruft asynchron alle 3 Sekunden eine API ('https://run.mocky.io/v3/685db531-06e7-4d66-bbf6-99de9f2feab3?mocky-delay=3000ms') auf, die eine
     Verzögerung von 3 Sekunden simuliert. Nachdem die Daten von der API abgerufen wurden, wird der bereitgestellte
     Callback mit den Daten aufgerufen.
 
