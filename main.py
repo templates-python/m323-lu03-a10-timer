@@ -12,7 +12,7 @@ def api_response_callback(response_data):
     Returns:
     - None, da die Daten direkt in der Konsole ausgegeben werden.
     """
-    print(f"API Response: {response_data}")
+    print(f'API Response: {response_data}')
 
 
 async def fetch_data_from_api(callback):
@@ -29,7 +29,9 @@ async def fetch_data_from_api(callback):
     """
     while True:
         async with httpx.AsyncClient() as client:
-            response = await client.get('https://run.mocky.io/v3/685db531-06e7-4d66-bbf6-99de9f2feab3?mocky-delay=3000ms')
+            response = await client.get(
+                'https://run.mocky.io/v3/685db531-06e7-4d66-bbf6-99de9f2feab3?mocky-delay=3000ms'
+            )
         callback(response)
         await asyncio.sleep(3)
 
