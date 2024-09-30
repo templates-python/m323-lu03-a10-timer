@@ -12,7 +12,8 @@ def api_response_callback(response_data):
     Returns:
     - None, da die Daten direkt in der Konsole ausgegeben werden.
     """
-    #TODO: Hier die Daten verarbeiten
+    # TODO: Hier die Daten verarbeiten
+
 
 async def fetch_data_from_api(callback):
     """
@@ -37,7 +38,7 @@ async def async_timer():
     Returns:
     - None, da der Zählerstand direkt in der Konsole ausgegeben wird.
     """
-    #TODO: Hier den Timer implementieren
+    # TODO: Hier den Timer implementieren
 
 
 async def main():

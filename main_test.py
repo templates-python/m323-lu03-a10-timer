@@ -13,7 +13,7 @@ def test_api_response_callback(capsys):
 # 2. Test für async_timer
 @pytest.mark.asyncio
 async def test_async_timer(capsys):
-    with patch('asyncio.sleep', side_effect=[None, None, StopAsyncIteration]):
+    with patch("asyncio.sleep", side_effect=[None, None, StopAsyncIteration]):
         try:
             await async_timer()
         except StopAsyncIteration:
@@ -35,8 +35,9 @@ async def test_fetch_data_from_api():
     mock_client.__aenter__.return_value = mock_client
     mock_client.__aexit__.return_value = False
 
-    with patch('httpx.AsyncClient', return_value=mock_client), \
-            patch('asyncio.sleep', side_effect=[None, StopAsyncIteration]):
+    with patch("httpx.AsyncClient", return_value=mock_client), patch(
+        "asyncio.sleep", side_effect=[None, StopAsyncIteration]
+    ):
         try:
             await fetch_data_from_api(mock_callback)
         except StopAsyncIteration:
