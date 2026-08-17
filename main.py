@@ -1,3 +1,8 @@
+"""Timer und API-Call.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu03/aufgaben/timer
+"""
+
 import asyncio
 import httpx
 
