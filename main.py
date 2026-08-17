@@ -38,7 +38,8 @@ async def fetch_data_from_api(callback):
 async def async_timer():
     """
     Diese Funktion fungiert als asynchroner Timer, der jede Sekunde hochzählt und den aktuellen Wert ausgibt.
-    Sie verwendet `asyncio.sleep` für die Verzögerung und führt eine endlose Schleife aus, die den Zähler jede Sekunde erhöht.
+    Sie verwendet `asyncio.sleep` für die Verzögerung und führt eine endlose Schleife aus, die den Zähler jede Sekunde
+    erhöht.
 
     Returns:
     - None, da der Zählerstand direkt in der Konsole ausgegeben wird.
