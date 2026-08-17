@@ -1,3 +1,8 @@
+"""Timer und API-Call.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu03/aufgaben/timer
+"""
+
 import asyncio
 import httpx
 
@@ -17,7 +22,8 @@ def api_response_callback(response_data):
 
 async def fetch_data_from_api(callback):
     """
-    Diese Funktion ruft asynchron alle 3 Sekunden eine API ('https://run.mocky.io/v3/685db531-06e7-4d66-bbf6-99de9f2feab3?mocky-delay=3000ms') auf, die eine
+    Diese Funktion ruft asynchron alle 3 Sekunden eine API
+    ('https://run.mocky.io/v3/685db531-06e7-4d66-bbf6-99de9f2feab3?mocky-delay=3000ms') auf, die eine
     Verzögerung von 3 Sekunden simuliert. Nachdem die Daten von der API abgerufen wurden, wird der bereitgestellte
     Callback mit den Daten aufgerufen.
 
@@ -39,7 +45,8 @@ async def fetch_data_from_api(callback):
 async def async_timer():
     """
     Diese Funktion fungiert als asynchroner Timer, der jede Sekunde hochzählt und den aktuellen Wert ausgibt.
-    Sie verwendet `asyncio.sleep` für die Verzögerung und führt eine endlose Schleife aus, die den Zähler jede Sekunde erhöht.
+    Sie verwendet `asyncio.sleep` für die Verzögerung und führt eine endlose Schleife aus, die den Zähler jede Sekunde
+    erhöht.
 
     Returns:
     - None, da der Zählerstand direkt in der Konsole ausgegeben wird.
